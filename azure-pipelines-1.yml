@@ -31,8 +31,9 @@ stages:
     - task: Docker@2
       inputs:
         containerRegistry: 'docker sconn'
-        repository: 'nagahpk/harirepository123'
-        command: 'push'
+        repository: 'harirepository123'
+        command: 'buildAndPush'
+        Dockerfile: '**/Dockerfile'
 
     - task: PublishBuildArtifacts@1
       inputs:
