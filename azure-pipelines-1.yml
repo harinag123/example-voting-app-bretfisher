@@ -28,6 +28,12 @@ stages:
         tags: |
           $(tag)
 
+    - task: Docker@2
+      inputs:
+        containerRegistry: 'docker sconn'
+        repository: 'nagahpk/harirepository123'
+        command: 'push'
+
     - task: PublishBuildArtifacts@1
       inputs:
        PathtoPublish: '$(Build.ArtifactStagingDirectory)'
