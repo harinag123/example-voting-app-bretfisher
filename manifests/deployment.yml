@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: harinagexamplevotingappbretfisher 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: harinagexamplevotingappbretfisher
+  template:
+    metadata:
+      labels:
+        app: harinagexamplevotingappbretfisher 
+    spec:
+      containers:
+        - name: harinagexamplevotingappbretfisher 
+          image: hariazurecontreg.azurecr.io/harinagexamplevotingappbretfisher
+          ports:
+          - containerPort: 80
